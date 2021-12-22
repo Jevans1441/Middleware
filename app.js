@@ -29,6 +29,7 @@ app.get("/:slug", (req, res) => {
   let link = req.params.slug;
   const ceo = db.find((ceo) => ceo.slug === link);
   res.render("partials/ceo-details", { name: ceo.name, year: ceo.year });
+  console.log(ceo);
 });
 
 server.listen(PORT, HOST, () => {
